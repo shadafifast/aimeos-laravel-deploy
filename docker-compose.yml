@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: laravel_app
+    ports:
+      - "80:8000"
+    volumes:
+      - .:/var/www
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: aimeos
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
