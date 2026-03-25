@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Setup SSH
         run: |
@@ -23,12 +22,3 @@ jobs:
       - name: Test SSH
         run: |
           ssh -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} "echo SUCCESS SSH"
-
-      - name: Deploy
-        run: |
-          ssh -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-            cd ~/myshop
-            git pull origin main
-            docker-compose down
-            docker-compose up -d --build
-          EOF
