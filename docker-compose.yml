@@ -2,15 +2,20 @@ version: '3.8'
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: laravel_app
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
     ports:
       - "80:8000"
-    volumes:
-      - .:/var/www
-    command: php artisan serve --host=0.0.0.0 --port=8000
     depends_on:
       - db
+    networks:
+      - myshop
 
   db:
     image: mysql:8
@@ -19,5 +24,17 @@ services:
     environment:
       MYSQL_DATABASE: aimeos
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: aimeos
+      MYSQL_PASSWORD: aimeos
     ports:
       - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - myshop
+
+networks:
+  myshop:
+
+volumes:
+  mysql_data:
