@@ -1,4 +1,4 @@
-kname: Deploy Laravel Aimeos to EC2
+name: Deploy Laravel Aimeos to EC2
 
 on:
   push:
