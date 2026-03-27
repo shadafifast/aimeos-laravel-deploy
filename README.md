@@ -139,7 +139,7 @@ Memperbaiki konfigurasi NGINX agar tidak memblokir folder `vendor`
 ![CI/CD](screenshots/cicd.png)
 ## 📂 Repository
 
-(Tambahkan link repository GitHub di sini)
+https://github.com/shadafifast/aimeos-laravel-deploy
 
 ---
 
