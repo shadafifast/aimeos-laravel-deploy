@@ -127,23 +127,16 @@ Memperbaiki konfigurasi NGINX agar tidak memblokir folder `vendor`
 ## 📸 Screenshots
 
 ### 🌍 Homepage
-
-![Homepage](screenshots/1-homepage.png)
+![Homepage](screenshots/homepage.png)
 
 ### 🔐 Admin Dashboard
-
-![Admin](screenshots/2-admin-dashboard.png)
+![Admin](screenshots/admin.png)
 
 ### 🐳 Docker Containers
-
-![Docker](screenshots/3-docker-ps.png)
+![Docker](screenshots/docker.png)
 
 ### 🔧 CI/CD Pipeline
-
-![CI/CD](screenshots/5-cicd.png)
-
----
-
+![CI/CD](screenshots/cicd.png)
 ## 📂 Repository
 
 (Tambahkan link repository GitHub di sini)
