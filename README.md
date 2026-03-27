@@ -1,6 +1,6 @@
-# 🚀 Aimeos Laravel Cloud Deployment (Full DevOps Project)
+#  Aimeos Laravel Cloud Deployment (Full DevOps Project)
 
-## 📌 Deskripsi
+##  Deskripsi
 
 Proyek ini merupakan implementasi aplikasi e-commerce berbasis Laravel (Aimeos) yang dideploy ke cloud menggunakan praktik DevOps modern.
 
@@ -8,7 +8,7 @@ Aplikasi dikontainerisasi menggunakan Docker, dideploy di AWS EC2, dilengkapi de
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 
 * Laravel + Aimeos
 * Docker & Docker Compose
@@ -18,7 +18,7 @@ Aplikasi dikontainerisasi menggunakan Docker, dideploy di AWS EC2, dilengkapi de
 
 ---
 
-## 🔧 CI/CD Pipeline
+## CI/CD Pipeline
 
 Pipeline CI/CD dibuat menggunakan GitHub Actions yang berjalan otomatis setiap ada perubahan pada branch `main`.
 
@@ -30,7 +30,7 @@ Fitur pipeline:
 
 ---
 
-## ☁️ Deployment
+##  Deployment
 
 Aplikasi dideploy di AWS EC2 menggunakan Docker.
 
@@ -39,7 +39,7 @@ http://54.255.194.210
 
 ---
 
-## 🔐 Keamanan
+##  Keamanan
 
 * File `.env` tidak disimpan di repository
 * Konfigurasi sensitif dipisahkan dari kode
@@ -47,7 +47,7 @@ http://54.255.194.210
 
 ---
 
-## 📈 Monitoring
+##  Monitoring
 
 Monitoring dilakukan menggunakan:
 
@@ -57,7 +57,7 @@ Monitoring dilakukan menggunakan:
 
 ---
 
-## 🚀 Scaling
+##  Scaling
 
 Scaling dilakukan menggunakan Docker Compose:
 
@@ -68,7 +68,7 @@ Pada instance EC2 dengan resource terbatas, scaling penuh dibatasi untuk menjaga
 
 ---
 
-## 🌐 Load Balancer (NGINX)
+##  Load Balancer (NGINX)
 
 NGINX digunakan sebagai reverse proxy untuk:
 
@@ -77,7 +77,7 @@ NGINX digunakan sebagai reverse proxy untuk:
 
 ---
 
-## 🔐 Admin Panel
+##  Admin Panel
 
 Halaman admin dapat diakses melalui:
 
@@ -87,16 +87,16 @@ Admin dibuat menggunakan Artisan CLI.
 
 ---
 
-## 🧪 Kendala dan Solusi
+##  Kendala dan Solusi
 
-### ❌ Docker build gagal (composer install)
+###  Docker build gagal (composer install)
 
 ✔ Solusi:
 Menjalankan `composer install` di host, bukan di dalam container
 
 ---
 
-### ❌ Error koneksi database
+###  Error koneksi database
 
 ✔ Solusi:
 Memperbaiki konfigurasi database dan user MySQL
